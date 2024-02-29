@@ -58,3 +58,40 @@ let myResume={
     ]
   }
   console.log(myResume);
+
+
+  
+  console.log("Using for loop:");
+  for (let key in resumeData) {
+  console.log(`${key}: ${resumeData[key]}`);
+}
+
+
+  console.log("\nUsing for...in loop:");
+  for (let key in resumeData) {
+  if (resumeData.hasOwnProperty(key)) {
+    console.log(`${key}: ${resumeData[key]}`);
+  }
+}
+
+
+  console.log("\nUsing for...of loop:");
+  for (let value of Object.values(resumeData)) {
+  console.log(value);
+}
+
+  console.log("\nUsing forEach loop for education:");
+  resumeData.education.forEach((education) => {
+  console.log(education);
+});
+
+  console.log("\nUsing forEach loop for experience:");
+  resumeData.experience.forEach((experience) => {
+  console.log(experience);
+});
+
+  console.log("\nUsing forEach loop for skills:");
+  resumeData.skills.forEach((skill) => {
+  console.log(skill);
+});
+        
